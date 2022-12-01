@@ -7,7 +7,7 @@ import { FilterValue } from './context/QuestionFilterContext.js';
 
 
 function Home() {
-  const [getFilter, setGetFilters] = useState('aaaa');
+  const [getFilter, setGetFilters] = useState('');
 
   return (
     <>

@@ -1,5 +1,5 @@
 import '.\./App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import AddQuestion from './addQuestion';
 import HomeIcon from '@mui/icons-material/Home';
 import MarginIcon from '@mui/icons-material/Margin';
@@ -10,9 +10,15 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LanguageIcon from '@mui/icons-material/Language';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { SearchFilterValue } from './context/SearchFiltr';
 
 function Nav() {
     const [openQues, SetOpenQues] = useState(false);
+    // const searchValue = useContext(SearchFilterValue)
+    // const searchData = (e) => {
+    //     searchValue.setSearchValue(e.target.value);
+    //     console.log(searchValue.search);
+    // }
 
     return (
         <>
@@ -39,7 +45,7 @@ function Nav() {
                         </div>
                         <div className='navitem search p-1 d-flex'>
                             <button className='searchBtn'><SearchIcon /></button>
-                            <input type='text' placeholder='Search..' />
+                            <input type='text' placeholder='Search..'/>
                         </div>
                         <div className='navitem try'>
                             <button>Try Quora+</button>
