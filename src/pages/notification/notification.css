@@ -1,0 +1,29 @@
+.notifContentWrap{
+  width: 1072px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+}
+
+.notifCenterConts{
+  width: 60%;
+}
+.notifRightCont{
+  width: 20%;
+}
+  
+@media screen and (max-width:900px) {
+  .notifContentWrap{
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .notifCenterConts{
+    width: 100%;
+  }
+
+  .notifRightCont{
+    display: none;
+  }
+}

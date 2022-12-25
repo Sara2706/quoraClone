@@ -1,6 +1,6 @@
-import '.\./App.css';
+import './navbar.css';
 import React, { useState, useContext } from 'react';
-import AddQuestion from './addQuestion';
+import AddQuestion from '../addquestion/addQuestion';
 import HomeIcon from '@mui/icons-material/Home';
 import MarginIcon from '@mui/icons-material/Margin';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
@@ -10,15 +10,15 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LanguageIcon from '@mui/icons-material/Language';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { SearchFilterValue } from './context/SearchFiltr';
+import { SearchFilterValue } from '../context/SearchFiltr';
 
 function Nav() {
     const [openQues, SetOpenQues] = useState(false);
-    // const searchValue = useContext(SearchFilterValue)
-    // const searchData = (e) => {
-    //     searchValue.setSearchValue(e.target.value);
-    //     console.log(searchValue.search);
-    // }
+    const value = useContext(SearchFilterValue);
+
+    const search = (e) => {
+        value.setSearchValue(e.target.value);
+    }
 
     return (
         <>
@@ -28,24 +28,24 @@ function Nav() {
                         <a href='/' className='text-decoration-none'><h3 className=' font-weight-bolder'>Quora</h3></a>
                     </div>
                     <div className='navitems d-flex justify-content-between align-items-center'>
-                        <div className='navitem'>
-                            <a href='/' className='text-decoration-none text-dark p-2'><HomeIcon /></a>
+                        <div className='navitem d-flex flex-column position-relative'>
+                            <a href='/' className='text-decoration-none text-dark p-2'><HomeIcon /></a><span className='position-absolute'>Home</span>
                         </div>
-                        <div className='navitem'>
-                            <a href='/' className='text-decoration-none text-dark p-2'><MarginIcon /></a>
+                        <div className='navitem d-flex flex-column position-relative'>
+                            <a href='/follow' className='text-decoration-none text-dark p-2'><MarginIcon /></a><span className='position-absolute'>Follow</span>
                         </div>
-                        <div className='navitem'>
-                            <a href='/' className='text-decoration-none text-dark p-2'><BorderColorIcon /></a>
+                        <div className='navitem d-flex flex-column position-relative'>
+                            <a href='/' className='text-decoration-none text-dark p-2'><BorderColorIcon /></a><span className='position-absolute'>Answer</span>
                         </div>
-                        <div className='navitem'>
-                            <a href='/' className='text-decoration-none text-dark p-2'><FamilyRestroomIcon /></a>
+                        <div className='navitem d-flex flex-column position-relative'>
+                            <a href='/' className='text-decoration-none text-dark p-2'><FamilyRestroomIcon /></a><span className='position-absolute'>Spaces</span>
                         </div>
-                        <div className='navitem'>
-                            <a href='/' className='text-decoration-none text-dark p-2'><NotificationsIcon /></a>
+                        <div className='navitem d-flex flex-column position-relative'>
+                            <a href='/notification' className='text-decoration-none text-dark p-2'><NotificationsIcon /></a><span className='position-absolute'>Notifications</span>
                         </div>
                         <div className='navitem search p-1 d-flex'>
                             <button className='searchBtn'><SearchIcon /></button>
-                            <input type='text' placeholder='Search..'/>
+                            <input type='text' placeholder='Search..' onChange={search}/>
                         </div>
                         <div className='navitem try'>
                             <button>Try Quora+</button>

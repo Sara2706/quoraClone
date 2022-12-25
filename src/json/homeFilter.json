@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "image":"https://www.naturettl.com/wp-content/uploads/2018/05/wildlife-photography-beginners-1200x900-cropped.jpg",
+        "filterName":"Photography"
+    },
+    {
+        "id": 2,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMrnS8EkoM82rXtMl8KU4RR8kc1EnvRdr08k3hbkqt41reFRV241u5Sg0w5tiGhSU0n_0&usqp=CAU",
+        "filterName":"Tech"
+    },
+    {
+        "id": 3,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfg9WT54O4z8QejXaQ6W3Ss9F6AaIfySsccg&usqp=CAU",
+        "filterName":"Movies"
+    },
+    {
+        "id": 4,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR68KlBNlBfL6n8ujQTRzl6X0YBTIcmLhDXEQ&usqp=CAU",
+        "filterName":"Sports"
+    },
+    {
+        "id": 5,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXmiDv4AxQZB5iRHScbkPfTSFL9kTx6IwCDXcQ2rt38uMFVZy8izvYNQLMA_4VKItxoO0&usqp=CAU",
+        "filterName":"Bollywood"
+    }
+]

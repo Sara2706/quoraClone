@@ -1,0 +1,21 @@
+.wrapper{
+    width: 100%;
+}
+
+.left a{
+    text-decoration: none;
+}
+
+.left p:hover,a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.noti{
+    background-color: rgb(236, 236, 236);
+}
+
+.noCont{
+    margin-top: 5px;
+    height: 100vh;
+}

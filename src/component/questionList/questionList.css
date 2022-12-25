@@ -1,0 +1,12 @@
+.noCont{
+  height:100vh;
+  margin-top:-25px;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noCont .noIcon{
+  font-size:75px;
+}

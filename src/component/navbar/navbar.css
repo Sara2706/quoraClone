@@ -1,0 +1,164 @@
+header{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 0 2px #000;
+  position: fixed;
+  z-index: 10;
+}
+
+nav{
+  width: 1072px;
+}
+
+.logo{
+  width: 10%;
+}
+
+.logo h3{
+  color: #8f1f1b;
+}
+
+.navitems{
+  width: 90%;
+}
+.navitem span{
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  bottom:-35px;
+  transform: translateX(-20%);
+  -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.77);
+  -moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.77);
+  box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.77);
+  font-size: 13px;
+  display: none;
+}
+.navitem:nth-child(5) span{
+  transform: translateX(-27%);
+}
+
+.navitem a:hover{
+  border-radius: 3px;
+  background-color: rgb(233, 233, 233);
+}
+.navitem:hover span{
+  display: block;
+}
+
+.search{
+  background-color: rgb(236, 236, 236);  
+  border-radius: 4px;
+}
+
+.search input{
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.search button{
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.nav-btn button{
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.try button{
+  border: none;
+  outline: none;
+  background: none;
+  padding: 5px 10px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.try button:hover{
+  background-color: rgb(233, 233, 233);
+}
+
+.nav-btn button{
+  padding: 7px 10px;
+  border-radius: 2px;
+}
+
+.nav-btn button:hover{
+  background-color: rgb(233, 233, 233);
+}
+
+.addQues button{
+  border: 0;
+  outline: none;
+  background-color: #8f1f1b;
+}
+
+.addQues button:first-child{
+  padding: 5px 10px;
+  border-radius: 15px 0 0 15px;
+}
+
+.addQues button:last-child{
+  padding: 5px 10px 3px 10px;
+  border-radius: 0 15px 15px 0;
+}
+
+.addQues button:hover{
+  background-color: rgb(102, 4, 4)
+}
+@media screen and (max-width:900px) {
+  header{
+      height: 70px;
+      background-color: #8f1f1b;
+      box-shadow: 0px 6px 2px #000;
+    }
+  
+    nav{
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+  
+    .logo{
+      height: 30px;
+      margin: 2.5px 0;
+    }
+  
+    .logo h3{
+      text-align: center;
+      color: white;
+    }
+  
+    .search{
+      background: none;
+      position: absolute;
+      top: 0;
+    }
+  
+    .search button,.search input::placeholder, .search input{
+      color: white;
+    }
+  
+    .try{
+      display: none;
+    }
+  
+    .navitems{
+      width: 100%;
+      background-color: white;
+    }
+  
+    .navitem:hover span{
+      display: none;
+    }
+}

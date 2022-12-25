@@ -1,0 +1,114 @@
+.fullWidth{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgb(44, 44, 44);
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.quesCcont{
+  position: fixed;
+  width: 65%;
+  height: 65%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  opacity: 1;
+  box-shadow: 2px 2px 2px #000;
+  z-index: 11;
+}
+
+.closeBtn{
+  border: none;
+  outline: none;
+}
+
+.quesHeader{
+  border-bottom: 1px solid #000;
+}
+
+.bottom{
+  border-bottom: 3px solid blue;
+}
+
+.quesHeadClose{
+  width: 10%;
+}
+
+.quesTopAcc{
+  display: flex;
+  align-items: center;
+}
+
+.profileIcon{
+  margin: 2px;
+}
+
+.setBtn{
+  background-color: rgba(209, 209, 209,0.2);
+  border: 1px solid rgb(90, 90, 90);
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+.select,.option{
+  background-color: inherit;
+  border:none;
+  outline: none;;
+}
+
+.setBtn:hover{
+  background-color: rgb(173, 173, 173);
+}
+
+.quesHeadBtn{
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quesInput input{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.quesBtn{
+  justify-content: right;
+}
+
+.quesBtn button{
+  margin: 10px;
+}
+
+@media screen and (max-width:900px) {
+  .addQues{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .addQues button{
+    background: none;
+  }
+
+  .addQues button:hover{
+    background: none;
+  }
+}

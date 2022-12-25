@@ -1,0 +1,44 @@
+.contentWrap{
+  width: 1072px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+}
+
+.fixed{
+  position: fixed;
+  width: max-content;
+}
+
+.fixed li{
+  width: 200px;
+}
+
+.fixed li:hover{
+  background-color: rgb(230, 230, 230);
+
+}
+
+.centerConts{
+  margin-left: 20%;
+  width: 60%;
+}
+.rightCont{
+  width: 20%;
+}
+  
+@media screen and (max-width:900px) {
+  .contentWrap{
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .centerConts{
+    margin:0;
+    width: 100%;
+  }
+
+  .rightCont{
+    display: none;
+  }
+}

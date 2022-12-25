@@ -1,0 +1,30 @@
+.notificationContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.first{
+    flex-grow: 1;
+}
+
+.first img{
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.second{
+    flex-grow: 5;
+}
+
+.cont{
+    border-radius: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    padding: 2px;
+}
+
+.third button:hover{
+    background-color: lightgrey;
+}

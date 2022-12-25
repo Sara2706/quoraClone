@@ -1,72 +1,71 @@
-import React, { useContext } from 'react';
-import Filter from './homeLeftBar';
-import datas from './json/questions.json';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ContactSupportIcon from '@mui/icons-material/ContactSupport';
-import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
-import CachedIcon from '@mui/icons-material/Cached';
-import { FilterValue } from './context/QuestionFilterContext.js';
+import React,{useState} from 'react';
+import './singleQuestion.css';
+import { ThumbUp, ThumbDown, ContactSupport, Cached } from '@material-ui/icons'
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import CloseIcon from '@mui/icons-material/Close';
 
-function Question() {
-    const value = useContext(FilterValue);
-    const getFilterDta = value.getFilter.toLowerCase();
-    const getdata = datas.filter((data) =>
-        data.catogory.toLowerCase().includes(getFilterDta)).map(data => {
-            return (<div className='quesBox rounded bg-white mt-2 mb-2 p-2 border'>
+
+function SingleQuestion({data}) {
+    const [viewCont, setViewCont] = useState(false);
+    return (
+        <>
+            <div className='quesBox rounded bg-white mt-2 mb-2 p-2 border'>
                 <div className='d-flex'>
                     <div className='profile m-1'>
                         <img src={data.profile} alt='user profile' />
                     </div>
-                    <div className='d-flex aa'>
+                    <div className='d-flex userCont'>
                         <div>
-                            <h6>{data.name}</h6>
+                            <h6>{data.name} <span className='text-primary mx-1' style={{ cursor: 'pointer' }}>Follow</span></h6>
                             <p>{data.workedAt}</p>
                         </div>
                         <div className='d-flex quesTopBtn'>
-                            <button className='aa'>...</button>
-                            <button>x</button>
+                            <button className='aa'><MoreHorizIcon /></button>
+                            <button><CloseIcon /></button>
                         </div>
                     </div>
                 </div>
                 <h4>{data.title}</h4>
-                <p>{data.body}</p>
-                <img src={data.img} className='quesImg' alt='image error' />
+                <p>
+                    {data.smallBody} 
+                    {viewCont?
+                    '':
+                    <span style={{cursor:'pointer'}} className='text-primary' onClick={()=>setViewCont(true)}>View More...</span>}
+                </p>
+                {viewCont && <p>{data.body}</p>}
+                <img src={data.img} className='quesImg' alt='error' />
                 <div className='d-flex align-items-center mt-2'>
                     <div className='likesetup d-flex align-items-center'>
                         <div className='mx-2'>
                             <button className='setitems d-flex align-items-center btn'>
-                                <ThumbUpIcon />
+                                <ThumbUp />
                                 <p className='m-1'>{data.like}</p>
                             </button>
                         </div>
                         <span className='likedivider'></span>
                         <div className='mx-2'>
                             <button className='setitems d-flex align-items-center btn'>
-                                <ThumbDownOffAltIcon />
+                                <ThumbDown />
                                 <p className='m-1'>{data.dislike}</p>
                             </button>
                         </div>
                     </div>
                     <div className='mx-2'>
                         <button className='setitems d-flex align-items-center btn'>
-                            <ContactSupportIcon />
+                            <ContactSupport />
                             <p className='m-1'>{data.comments}</p>
                         </button>
                     </div>
                     <div className='mx-2'>
                         <button className='setitems d-flex align-items-center btn'>
-                            <CachedIcon />
+                            <Cached />
                             <p className='m-1'>{data.share}</p>
                         </button>
                     </div>
                 </div>
-            </div>)
-        })
-    return (
-        <>
-            {getdata}
+            </div>
         </>
     )
 }
 
-export default Question
+export default SingleQuestion
